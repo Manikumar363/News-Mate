@@ -131,17 +131,17 @@ const ChatScreen = () => {
                   {msg.role !== "user" ? (
                     idx === messages.length - 1 ? (
                        <Typewriter
-                        words={[msg?.message || ""]}
+                        words={[msg.message]}
                         typeSpeed={5}
                         deleteSpeed={0}
                         delaySpeed={500}
                         onType={() => setIsTyping((prev) => !prev)}
                       />
                     ) : (
-                      msg?.message
+                      msg.message
                     )
                   ) : (
-                    msg?.message
+                    msg.message
                   )}
                 </p>
               </div>
